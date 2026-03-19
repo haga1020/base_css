@@ -1,0 +1,117 @@
+/* =============================
+   petally Base CSS (Design System)
+   ============================= */
+
+:root {
+  /* ===== Color Tokens (override per HTML) ===== */
+  --color-bg: #f5f7fa;
+  --color-card: #ffffff;
+  --color-text: #333;
+
+  /* Layer Colors (can override per document) */
+  --layer-1: #e3f2fd; /* outer */
+  --layer-2: #fff3cd; /* box */
+  --layer-3: #e8f5e9; /* inner */
+
+  /* Brand Accent */
+  --accent-main: #222;
+  --accent-sub: #888;
+
+  /* Status Colors */
+  --color-ume: #6c757d;
+  --color-take: #f0ad4e;
+  --color-matsu: #d9534f;
+}
+
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: var(--color-card);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* ===== Typography ===== */
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 16px;
+  margin-top: 10px;
+  color: var(--accent-sub);
+}
+
+/* ===== Badge ===== */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.badge.ume { background: var(--color-ume); }
+.badge.take { background: var(--color-take); }
+.badge.matsu { background: var(--color-matsu); }
+
+/* ===== Box Structure ===== */
+.box {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.level-1 { background: var(--layer-1); }
+.level-2 { background: var(--layer-2); margin-left: 10px; }
+.level-3 { background: var(--layer-3); margin-left: 20px; }
+
+/* ===== Label + Cost ===== */
+.label {
+  font-size: 14px;
+}
+
+.cost {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 12px;
+  color: var(--accent-sub);
+}
+
+/* ===== Utility ===== */
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== Optional: Hover (for presentation) ===== */
+.box:hover {
+  border-color: var(--accent-main);
+}
